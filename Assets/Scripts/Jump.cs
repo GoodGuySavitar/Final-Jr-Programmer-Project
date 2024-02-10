@@ -19,7 +19,7 @@ public class Jump : MonoBehaviour
         isOnGround = true;
     }
 
-    public void JumpUp()                                                      // ABSTRACTION  
+    public virtual void JumpUp()                                                      // ABSTRACTION  
     {
         gameObject.GetComponent<Rigidbody>().AddForce(Vector3.up * weight);
     }

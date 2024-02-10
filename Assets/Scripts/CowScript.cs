@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class CowScript : Jump       // INHERITANCE  
 {
-    public void JumpUp()                            // POLYMORPHISM
+    public override void JumpUp()                            // POLYMORPHISM
     {
-        gameObject.GetComponent<Rigidbody>().AddForce(Vector3.up * weight);
+        gameObject.GetComponent<Rigidbody>().AddForce(Vector3.up * 300);
     }
     // Start is called before the first frame update
     void Start()
     {
-        weight = 300;
+        
     }
     
     // Update is called once per frame
