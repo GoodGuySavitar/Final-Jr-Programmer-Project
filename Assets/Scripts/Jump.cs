@@ -3,15 +3,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Jump : MonoBehaviour
+public class Jump : MonoBehaviour                
 {
-    private bool isOnGround = true;
-    public GameObject ground; 
-    public int weight;
+    public bool isOnGround = true;
+    public GameObject ground;
+    public int weight { get; set; }          // ENCAPSULATION 
     // Start is called before the first frame update
     void Start()
     {
-        
+        weight = 200;
     }
 
     public void OnCollisionEnter(Collision other)
@@ -19,7 +19,7 @@ public class Jump : MonoBehaviour
         isOnGround = true;
     }
 
-    public void JumpUp()
+    public void JumpUp()                                                      // ABSTRACTION  
     {
         gameObject.GetComponent<Rigidbody>().AddForce(Vector3.up * weight);
     }
